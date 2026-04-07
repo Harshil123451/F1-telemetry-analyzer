@@ -14,6 +14,8 @@ st.set_page_config(
     layout="wide"
 )
 
+
+
 # Initialize FastF1 cache
 @st.cache_resource
 def init_cache():
