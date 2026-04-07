@@ -1,0 +1,11 @@
+# Ignore cache and generated data
+f1/f1_cache/
+f1/outputs/
+f1/test_cache/
+
+# Ignore analysis scripts not needed for deployment
+f1/enhanced_analysis.py
+f1/f1_telemetry_analysis.py
+f1/main.py
+f1/track_visualization.py
+f1/test_setup.py
