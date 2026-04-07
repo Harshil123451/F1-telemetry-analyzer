@@ -4,11 +4,8 @@ import streamlit as st
 import fastf1
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import os
 from datetime import datetime
-import base64
-from io import BytesIO
 
 # Configure Streamlit page
 st.set_page_config(
@@ -21,8 +18,7 @@ st.set_page_config(
 @st.cache_resource
 def init_cache():
     cache_dir = 'f1_cache'
-    if not os.path.exists(cache_dir):
-        os.makedirs(cache_dir)
+    os.makedirs(cache_dir, exist_ok=True)
     fastf1.Cache.enable_cache(cache_dir)
     return True
 
